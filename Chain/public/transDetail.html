@@ -1,0 +1,114 @@
+<div class="row margin-bottom-15 ">
+    <form>
+        Transaction Hash: <input type="text" id="tnum" value={{addr}} style="width: 900px;">
+
+        <a class="btn btn-grad" ng-click="click()" id="alink">Search <i class="fa fa-search"
+                aria-hidden="true"></i></a></br>
+    </form>
+</div>
+
+<div class="row">
+
+
+
+    <div class="panel panel-info table-responsive mtd">
+
+        <div class="panel-heading margin-bottom-15 ">
+            <h3 class="panel-title">Transaction Information</h3>
+        </div>
+
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-2">Block Number:
+                </div>
+                <div class="col-md-10">
+                    <!--<a id="ContentPlaceHolder1_HyperLinkPrev" title="Previous Block" class="btn btn-grad btn-xs" role="button" href="/block/4817051">&lt; Prev</a>&nbsp; &nbsp;-->
+                    <b>{{block.blockNumber}}</b>&nbsp;&nbsp;
+                    <!--<a id="ContentPlaceHolder1_HyperLinkNext" title="Next Block" class="btn btn-grad btn-xs" role="button" href="/block/4817053">Next &gt;</a>-->
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2">Transaction Hash:
+                </div>
+                <div class="col-md-10">
+                    {{block.transactionHash}}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2">From:
+                </div>
+                <div class="col-md-10">
+                    {{block.from}}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2">To:
+                </div>
+                <div class="col-md-10">
+                    {{block.to}}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2">Gas Used:
+                </div>
+                <div class="col-md-10">
+                    {{block.cumulativeGasUsed}}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2">Events:
+                </div>
+                <div class="col-md-10">
+                    {{block.logs[0].topics}} , {{block.logs[1].topics}}
+                </div>
+            </div>
+            <!-- do modification in block object for data enrichment-->
+
+            <!--<div class="row">
+                <div class="col-md-2">Logs:
+                </div>
+                <div class="col-md-10">
+                    {{block.logs}}
+                </div>
+            </div>-->
+
+            <!-- <div class="row">
+                <div class="col-md-2">Gas Used:
+                </div>
+                <div class="col-md-10">
+                    {{block.gasUsed}}
+                </div>
+            </div> -->
+   
+            <div class="row" ng-if="block.contractAddress != null">
+                <div class="col-md-2">Contract Created:
+                </div>
+                <div class="col-md-10" id="contract-value">
+                    <a href="#/contractDetail/{{block.transactionHash}}">{{block.contractAddress}}</a>
+                </div>
+            </div>
+          
+
+            <!--<div class="row">
+                    <div class="col-md-2">Block Reward:
+                    </div>
+                    <div class="col-md-10">
+                        3<b>.</b>266153007791305398 Ether (<span rel="tooltip" data-placement="bottom" title="" data-original-title="Static block reward">3</span> + <span rel="tooltip" data-placement="bottom" title="" data-original-title="Txn Fees">0.266153007791305398</span>)</div>
+                </div>-->
+            <!--<div class="row">
+                    <div class="col-md-2">Uncles Reward:
+                    </div>
+                    <div class="col-md-10">
+                        0</div>
+                </div>-->
+
+
+            <br>
+        </div>
+    </div>
+</div>

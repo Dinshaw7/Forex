@@ -1,0 +1,62 @@
+<!-- Home Page -->
+<div class="row" style="margin-left: -110px; margin-right: 15px;">
+        <div class="row">
+<!--                 <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+ -->            <div class="row pull-right">
+                <form>
+                    Search by account: <input type="text" id="accnum">
+                    <a class="btn btn-grad" ng-click="clickAcc()" id="acclink">Search <i class="fa fa-search" aria-hidden="true"></i></a>
+                </form>
+            </div>
+    
+            <div class="row pull-left">
+                <form style="margin-left: 120px;">
+                    Search by user: <input type="text" id="uid">
+    
+                    <a class=" btn btn-grad" ng-click="clickUser()" id="userlink">Search <i class="fa fa-search" aria-hidden="true"></i></a>
+                </form>
+            </div>
+        </div>
+    
+        <!--<div class="row mtd">
+            <div class="col-md-3">
+                <button class="btn btn-green" role="button" ng-click="getAllPayments()">Get Payment Details</button>
+            </div>
+        </div>-->
+        
+        <div class="row col-md-8 mtd">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>From user</th>
+                       <!-- <th>To user</th> -->
+                        <th>From account</th>
+                        <th>To account</th>
+                        <th>From currency</th>
+                        <th>To currency</th>
+                        <th>Sent amount</th>
+                        <th>Recieved account</th>
+                        <th>Implied rate</th>
+                        <th>Market rate</th>
+                        <th>Fees paid</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="pay in accountPayments">
+                        <td>{{pay.userId}}</td>
+                <!--<td>{{pay.toUser}}</td> -->
+                        <td>{{pay.fromAccount}}</td>
+                        <td>{{pay.toAccount}}</td>
+                        <td>{{pay.fromCurrency}}</td>
+                        <td>{{pay.toCurrency}}</td>
+                        <td>{{pay.amountSent}}</td>
+                        <td>{{pay.amountReceived}}</td>
+                        <td>{{pay.impliedRate}}</td>
+                        <td>{{pay.marketRate}}</td>
+                        <td>{{pay.fees}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    

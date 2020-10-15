@@ -1,0 +1,111 @@
+<!-- index.html -->
+<!doctype html>
+
+<html>
+
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>MOONCHAIN</title>
+
+    <!-- SCROLLS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <!-- load bootstrap -->
+    <link rel='icon' href='favicon.ico' type='image/x-icon'>
+    <style>
+        html {
+            overflow-y: scroll;
+        }
+
+        a {
+            cursor: pointer;
+        }
+
+        .marginTop15 {
+            margin-top: 15px;
+        }
+    </style>
+
+    <!-- SPELLS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- load jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script> load angular -->
+    <link rel="stylesheet" href="\loader\loader.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+   <!-- <script src=".\myApp.js"></script>
+    <script src="\loader\loaderService.js"></script>
+    <script src=".\dashboardController.js"></script>
+    <script src=".\homeController.js"></script>
+    <script src=".\blockListController.js"></script>
+    <script src=".\transactionsListController.js"></script>
+    <script src=".\transactionController.js"></script>
+    <script src=".\blockController.js"></script>
+    <script src=".\allTransactionController.js"></script>
+    <script src=".\userPaymentListController.js"></script>
+    <script src=".\accountPaymentListController.js"></script>
+    <script src=".\transDetailController.js"></script>
+    <script src=".\queryTransactionController.js"></script>
+    <script src=".\paymentController.js"></script>-->
+</head>
+<!-- SET THE CONTROLLER AND GET ALL TODOS -->
+
+<body ng-app="myApp">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand " href="#">
+                    <img src="images/moonx.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                    MOONCHAIN
+                </a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="#/accounts">Accounts</a></li>
+                <li><a href="#/blockList">Blocks</a></li>
+                <li><a href="#/transactions">Transactions</a></li>
+                <li><a href="#/queryTransactions">Transaction Details</a></li>
+                <li><a href="#/payments">Payments</a></li>
+                <li><a href="#/contracts">Contracts</a></li>
+                <!--<li><a href="#/contractInfo">Contract Info</a></li>-->
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+
+        <div id="overlay" data-ng-if="loading">
+
+            <img id="loaderImg" src="assets/loader.gif" />
+        </div>
+
+        <!--New code-->
+        <div ng-view>
+        </div>
+        
+    <script src=".\myApp.js"></script>
+    <script src="\loader\loaderService.js"></script>
+    <script src=".\dashboardController.js"></script>
+    <script src=".\homeController.js"></script>
+    <script src=".\blockListController.js"></script>
+    <script src=".\transactionsListController.js"></script>
+    <script src=".\transactionController.js"></script>
+    <script src=".\blockController.js"></script>
+    <script src=".\allTransactionController.js"></script>
+    <script src=".\paymentController.js"></script>
+    <script src=".\userPaymentListController.js"></script>
+    <script src=".\accountPaymentListController.js"></script>
+    <script src=".\transDetailController.js"></script>
+    <script src=".\queryTransactionController.js"></script>
+    <script src=".\contractsController.js"></script>
+    <!--<script src=".\contractInfoController.js"></script>-->
+    <script src=".\contractDetailController.js"></script>
+  
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!-- Contracts List Page -->
+<div class="row">
+    <!-- <div class="row">
+            <div class="col-md-3">
+                <button class="btn btn-green" role="button" ng-click="getAllBlocks()">Get Blocks from Chain</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-green" role="button" ng-click="getAllBlocksFromFile()">Get Blocks from
+                    File</button>
+            </div>
+        </div> -->
+
+  <!--   <div class="row pull-right">
+        <form>
+            Block number: <input type="text" id="tnum">
+
+            <a class="btn btn-grad" ng-click="click()" id="alink">Search <i class="fa fa-search"
+                    aria-hidden="true"></i></a>
+        </form>
+    </div> 
+  -->
+
+
+    <div class="row">
+        <form>
+
+            <a class="btn btn-green" ng-click="getAllContracts()">Get All Contracts</a>
+        </form>
+        <div class="row mtd">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th style="width:300px;">Contract Address</th>
+                        <th>Contract Creator</th>
+                        <th>Gas Used</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="contr in contr_Details">
+                        <td>{{contr.contract_address}}</td>
+                        <td>{{contr.contract_creator}}</td>
+                        <td>{{contr.contract_gasUsed}}</td>
+                        <td>{{contr.contract_value}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

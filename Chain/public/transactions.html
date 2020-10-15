@@ -1,0 +1,52 @@
+<!-- Transactions List Page -->
+<div class="row" style="margin-left: -110px; margin-right: -15px;">
+        <!-- <div class="row">
+            <div class="col-md-3">
+                <button class="btn btn-green" role="button" ng-click="getAllBlocks()">Get Blocks from Chain</button>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-green" role="button" ng-click="getAllBlocksFromFile()">Get Blocks from
+                    File</button>
+            </div>
+        </div> -->
+
+    <div class="row pull-right">
+        <form>
+            Block number: <input type="text" id="tnum">
+
+            <a class="btn btn-grad" ng-click="click()" id="alink">Search <i class="fa fa-search"
+                    aria-hidden="true"></i></a>
+        </form>
+    </div>
+    <div class="row">
+        <form>
+
+            <a class="btn btn-green" id="getAllLink" ng-click="getAllTransactions()">Get All Transactions</a>
+        </form>
+        <div class="row mtd">
+            <table class="table table-hover" style="font-size: 13px;">
+                <thead>
+                    <tr>
+                        <th style="width:300px;">Tx Hash</th>
+                        <th>Block</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="tx in txDetails">
+                        <td><a href="#/transDetail/{{tx.hash}}">{{tx.hash}}</a></td>
+                        <td>{{tx.blockNumber}}</td>
+                        <td>{{tx.from}}</td>
+                        
+                        <td ng-if="tx.isContract == true"><a href="#/contractDetail/{{tx.hash}}">{{tx.to}}</a></td>
+                        <td ng-if="tx.isContract == false">{{tx.to}}</td>
+
+                        <td>{{tx.value}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
